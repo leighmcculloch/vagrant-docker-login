@@ -1,13 +1,13 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-# unless Vagrant.has_plugin?("vagrant-docker-login")
-#   system("vagrant plugin install vagrant-docker-login")
-#   puts "Dependencies installed, please try the command again."
-#   exit
-# end
+unless Vagrant.has_plugin?("vagrant-docker-login")
+  system("vagrant plugin install vagrant-docker-login")
+  puts "Dependencies installed, please try the command again."
+  exit
+end
 
-unless ENV["DOCKER_USERNAME"] && ENV["DOCKER_PASSWORD"]
+unless ENV["DOCKER_USERNAME"] && ENV["DOCKER_EMAIL"] && ENV["DOCKER_PASSWORD"]
   puts "Set your DOCKER_USERNAME and DOCKER_PASSWORD environment variable."
   exit
 end

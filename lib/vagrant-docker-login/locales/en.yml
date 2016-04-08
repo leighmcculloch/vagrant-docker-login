@@ -1,0 +1,2 @@
+en:
+  docker_login_logging_in: Logging into Docker server %{server}
